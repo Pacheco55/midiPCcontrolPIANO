@@ -1,0 +1,190 @@
+{
+  "midi": {
+    "port_name": "ctk-2400",
+    "channel": 0,
+    "note_channel": 0
+  },
+  "mqtt": {
+    "enabled": true,
+    "broker": "192.168.0.192",
+    "port": 1883,
+    "username": "CTK2400",
+    "password": "",
+    "client_id": "casio_midi_controller"
+  },
+  "mappings": {
+    "notes": {
+      "60": {
+        "action": "open_program",
+        "label": "vsComuny",
+        "program": "C:\\Users\\pache\\OneDrive\\Desktop\\Visual Studio 2022 - Acceso directo.lnk"
+      },
+      "62": {
+        "action": "open_program",
+        "label": "VScode",
+        "program": "C:\\Users\\pache\\OneDrive\\Desktop\\Visual Studio Code - Acceso directo.lnk"
+      },
+      "64": {
+        "action": "brightness",
+        "label": "brillo"
+      },
+      "65": {
+        "action": "media",
+        "command": "play_pause",
+        "label": "Play/Pause"
+      },
+      "67": {
+        "action": "media",
+        "command": "next_track",
+        "label": "Siguiente pista"
+      },
+      "69": {
+        "action": "key_press",
+        "label": "escritorio",
+        "keys": [
+          "win",
+          "d"
+        ]
+      },
+      "71": {
+        "action": "open_program",
+        "label": "SequencerYeah",
+        "program": "C:\\Users\\pache\\OneDrive\\Documentos\\WORKSPACE\\EXE\\sequencerPBS\\sequencerPBS.exe - Acceso directo.lnk"
+      },
+      "72": {
+        "action": "open_url",
+        "label": "CAM",
+        "url": "https://ipc-us.ismartlife.me/"
+      },
+      "74": {
+        "action": "open_url",
+        "label": "Claude",
+        "url": "https://claude.ai/new"
+      },
+      "76": {
+        "action": "open_url",
+        "label": "GreenchLabs",
+        "url": "https://q6jt54sv-4200.usw3.devtunnels.ms/"
+      },
+      "77": {
+        "action": "open_url",
+        "url": "https://github.com/Pacheco55",
+        "label": "GitHub PIXELBITS"
+      },
+      "79": {
+        "action": "open_program",
+        "label": "Brave",
+        "program": "C:\\Users\\pache\\OneDrive\\Desktop\\Brave - Acceso directo.lnk"
+      },
+      "83": {
+        "action": "open_program",
+        "label": "Teams",
+        "program": "C:\\Users\\pache\\OneDrive\\Desktop\\Microsoft Teams - Acceso directo.lnk"
+      },
+      "84": {
+        "action": "key_press",
+        "label": "archivos",
+        "keys": [
+          "win",
+          "e"
+        ]
+      },
+      "86": {
+        "action": "mqtt_publish",
+        "label": "brillo3",
+        "topic": "neopixel/led/brightness",
+        "payload": "{\"brightness\":255}"
+      },
+      "88": {
+        "action": "mqtt_publish",
+        "label": "brillo2",
+        "topic": "neopixel/led/brightness",
+        "payload": "{\"brightness\":90}"
+      },
+      "89": {
+        "action": "mqtt_publish",
+        "label": "brillo1",
+        "topic": "neopixel/led/brightness",
+        "payload": "{\"brightness\":10}"
+      },
+      "91": {
+        "action": "mqtt_publish",
+        "label": "brillo1",
+        "topic": "neopixel/led/brightness",
+        "payload": "{\"brightness\":10}"
+      },
+      "92": {
+        "action": "mqtt_publish",
+        "label": "ledverde",
+        "topic": "neopixel/led/effect",
+        "payload": "{\"effect\":10,\"trail\":8,\"speed\":70}"
+      },
+      "95": {
+        "action": "mqtt_publish",
+        "label": "blancoLED",
+        "topic": "neopixel/led/command",
+        "payload": "{\"command\":\"all_white\",\"brightness\":255}"
+      },
+      "93": {
+        "action": "mqtt_publish",
+        "label": "rainbowLED",
+        "topic": "neopixel/led/effect",
+        "payload": "{   \"effect\": 1,   \"speed\": 75,\"brightness\":255,   \"rainbow\": true,   \"random\": false,   \"trail\": 5,   \"direction\": 0,   \"strobe\": false }"
+      },
+      "96": {
+        "action": "mqtt_publish",
+        "label": "OFFled",
+        "topic": "neopixel/led/command",
+        "payload": "{\"command\":\"clear\"}"
+      }
+    },
+    "control_change": {
+      "7": {
+        "action": "volume",
+        "label": "Volumen del sistema"
+      },
+      "10": {
+        "action": "mouse_x",
+        "label": "Mouse horizontal"
+      },
+      "11": {
+        "action": "mouse_y",
+        "label": "Mouse vertical"
+      },
+      "91": {
+        "action": "mqtt_publish",
+        "topic": "lights/SLAVE_01/command",
+        "payload": "{\"brightness\":{value}}",
+        "label": "Brillo RGB MQTT"
+      }
+    },
+    "program_change": {
+      "0": {
+        "action": "open_program",
+        "program": "explorer",
+        "label": "Explorador de archivos"
+      },
+      "1": {
+        "action": "open_program",
+        "program": "calc",
+        "label": "Calculadora"
+      },
+      "3": {
+        "action": "key_press",
+        "keys": [
+          "win",
+          "e"
+        ],
+        "label": "Explorador Windows"
+      },
+      "4": {
+        "action": "mqtt_publish",
+        "topic": "home/scene",
+        "payload": "\"studio\"",
+        "label": "Escena Estudio MQTT"
+      }
+    }
+  },
+  "velocity_threshold": 10,
+  "octave_shift": 0
+}
